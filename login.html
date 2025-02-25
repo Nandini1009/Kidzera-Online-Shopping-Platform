@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Here-Kidzera</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imgs/favicon.png">
+  <link rel="icon" type="image/png" href="imgs/apple-touch-icon.png">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+.signin {
+        justify-self: center;
+    bottom: 23px;
+    position: relative;
+}
+.link {
+    text-decoration: underline;
+}
+.other {
+    width: -webkit-fill-available;
+    height: auto;
+    border: 1px solid #292560 !important;
+    background: #fff !important;
+    font-weight: bold;
+    color: #292560 !important;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right;
+}
+.oroption {
+    width: 163px;
+    padding: 10px 0px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+}
+.qrhrline {
+    height: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    border-color: #e0e0e0;
+}
+.orcode {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 37px;
+    display: inline-block;
+    z-index: 2;
+    background: #fff;
+    text-align: center;
+}
+span {
+    font-size: 11px;
+    position: relative;
+    font-weight: 700;
+}
+p {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#heading {
+    text-transform: uppercase;
+    color: #673AB7;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.3);
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform {
+    text-align: left;
+    border: 1px solid #bbb7b7;
+    padding: 25px;
+    border-radius: 3%;
+    width: 400px;
+    align-self: center;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+.icon {
+width: 20px;
+}
+
+#msform input,
+#msform textarea {
+    background-color: #fff;
+    width: 100%;
+            height: 31px;
+            padding: 3px 7px;
+            line-height: normal;
+            border-color: #888c8c;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(15, 17, 17, .15) inset;
+            outline: 0;
+            position: relative;
+            margin-bottom: 15px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #fbd03d;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: -webkit-fill-available;
+    height: auto;
+    background: #292560;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #fbd03d;
+}
+
+#msform .action-button-previous {
+    float: left;
+    background: none;
+    border: none;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #0f1111;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: left
+}
+
+.purple-text {
+    color: #673AB7;
+    font-weight: normal;
+    font-size: large;
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: #0f1111;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #673AB7
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f13e"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f030"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #673AB7
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #673AB7
+}
+
+.fit-image {
+    width: 50%;
+    object-fit: cover;
+    margin: 6px 15px;
+}
+.logo {
+    width:30%;
+}
+.center {
+    align-self: center;
+}
+.left {
+    float: left;
+}
+.self {
+    text-align: justify;
+    line-height: 1.25;
+}
+ .footer-copy .container {
+    padding: 3vh;
+}
+.footer-copy {
+    border-top: 1px solid #bab7b7;
+    background: #060e1f;
+}
+.footer-copy a {
+    color: #2874f0;
+    font-size: 16px;
+}
+.footer-copy p {
+    color: #fff;
+    font-weight: 400;
+     font-size: 16px;
+}
+.container-fluid {
+    position: relative;
+    bottom: 40px;
+}
+.terms {
+    line-height: 1;
+    background-image: url(https://cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+    background-repeat: repeat;
+    font-size: 12px;
+}
+mark {
+    font-size: 8px;
+    font-weight: 600;
+}
+#forgot {
+    background: none !important;
+    color: #007bff !important;
+    box-shadow: none !important;
+    float: unset !important;
+    margin: -13px 0 0 240px !important;
+}
+#forgot:hover,
+#forgot:focus {
+    border: none !important;
+    outline: none !important;
+}
+.success-text {
+    font-size: 13px;
+    font-weight: 800;
+}
+</style>
+
+</head>
+<body class="terms">
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3 terms">
+                <img src="imgs/logo/logo1.png" class="logo center">
+                <form id="msform"><!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="fs-title">SIGN IN</h2>
+                                </div>
+                            </div> 
+                             <label class="fieldlabels">Email/Mobile number: </label> <br>
+                             <input type="text" name="mobile" placeholder="Enter email/mobile number" /> 
+                        </div> <input type="button" name="next" class="next action-button" value="VERIFY MOBILE NUMBER" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="fs-title">Authentication Required</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <p>IN +918796541236 <a href="#">Change</a></p>
+                                </div>
+                            </div>                             
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <p>We've sent a One Time Password(OTP) to the mobile number above. Please enter it to complete verification.</p>
+                                </div>
+                            </div>
+                            <label class="fieldlabels">Enter security code: </label> 
+                            <input type="text" name="otp" />
+                            <p class="left"><a href="#">Resend OTP</a></p> 
+                        </div> <input type="button" name="next" class="submit action-button" value="LOGIN" onclick='window.location="Account/cart.html"' /> 
+                        <div class="oroption">
+                          <div class="qrhrline">
+                            <span class="orcode">OR</span>
+                          </div>
+                        </div><br><br><br><br><br><br><br><br><br>
+                        <input type="button" name="next" class="other next action-button" value="SIGN IN WITH YOUR PASSWORD" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="fs-title">SIGN IN</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <p>IN +918796541236 <a href="#">Change</a></p>
+                                </div>
+                            </div>                             
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <p>Please enter your password to sign in to your account.</p>
+                                </div>
+                            </div>
+                            <label class="fieldlabels">Password: </label> 
+                            <input type="text" name="otp" placeholder="Enter your password" />
+                        </div> 
+                            <input type="button" id="forgot" name="next" class="next action-button" value="Forgot password?" /><input type="button" name="next" class="submit action-button" value="LOGIN" onclick='window.location="Account/cart.html"' /> 
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="fs-title">Password assistance</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <p>Enter the email address or mobile phone number associated with your Amazon account.</p>
+                                </div>
+                            </div>  
+                            <label class="fieldlabels">Email or mobile phone number: </label> 
+                            <input type="text" name="otp" placeholder="Enter your mobile number or email" />
+                        </div> <input type="button" name="next" class="next action-button" value="CONTINUE" /> 
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="fs-title">Enter verification code</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <p>For your security, we have sent the code to your phone ***-***-**85.</p>
+                                </div>
+                            </div>  
+                            <input type="text" name="otp" />
+                            <p class="left"><a href="#">Resend OTP</a></p> 
+                        </div> <input type="button" name="next" class="next action-button" value="CONTINUE" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h2 class="fs-title">Create Password</h2>
+                                </div>
+                            </div>
+                            <label class="fieldlabels">Password: </label> 
+                            <input type="text" name="otp" placeholder="Enter your password" />
+                            <label class="fieldlabels">Confirm Password: </label> 
+                            <input type="text" name="otp" placeholder="Re-enter your password" />
+                            <mark>Password must contains atleast 6 characters long including special symbols like @, #, $, & etc.</mark><br><br>
+                        </div> <input type="button" name="next" class="next action-button" value="SUBMIT" /> 
+                    </fieldset>
+                     <fieldset>
+                        <div class="form-card">
+                          <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br>
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="success-text text-center purple-text">Your Password are all set.</h5>
+                                    <p>Continue to <a href="login.html">Sign in</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <p class="signin">New to Kidzera? <a href="registration.html">Sign up</a></p>
+                    <p class="self">By creating an account or logging in, you agree to Kidzera's <a href="#" class="link">Conditions of Use</a> and<a href="#" class="link"> Privacy Policy</a></p><br>                        
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+    <div class="card hidden">
+  <div class="py-3 footer-copy">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>Policies: Returns Policy | Terms of use | Security | Privacy</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>© 2007-2024 Kidzera.com</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>Need help? Visit the <a href="#">Help Center</a> or <a href="#">Contact Us</a></p>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+  <!-- end of footer -->
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+    $(document).ready(function(){
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+</script>
+
+
+</body>
+</html>

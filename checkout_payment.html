@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Checkout for Product-Kidzera</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imgs/favicon.png">
+  <link rel="icon" type="image/png" href="imgs/apple-touch-icon.png">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Custom-Files -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- Bootstrap css -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- Main css -->
+  <link rel="stylesheet" href="css/fontawesome-all.css">
+  <!-- Font-Awesome-Icons-CSS -->
+  <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- pop-up-box -->
+  <link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- menu style -->
+  <!-- //Custom-Files -->
+
+  <!-- web fonts -->
+  <link href="http://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  <!-- //web fonts -->
+
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../../../../../assests/css/font-awesome.min.css">
+<!-- New toolbar-->
+<style>
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.checkout {
+  float: right;
+  /* top: 3px; */
+  position: relative;
+  /*bottom: 15px;*/
+}
+
+#image{
+    margin-top: 10px;
+    box-shadow: 2px 0 8px 3px rgba(0, 0, 0, 0.1);
+    width: 53%;
+    padding: 0 12px;
+    font-weight: 400;
+    padding-bottom: 0;
+    height: 40px;
+    user-select: none;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: x-large;
+    border: red 2px solid;
+    margin-bottom: 20px;
+    text-align-last: center;
+    margin-left: 10px;
+    
+}
+#user-input{
+    /*box-shadow: 5px 5px 5px 5px gray;*/
+    width:auto;
+    /*margin-right: 10px;*/
+    padding: 10px;
+    padding-bottom: 0px;
+    height: 40px;
+    border: red 0px solid;
+}
+.captcha-input{
+    border:none;
+    width: 117px;
+    padding: 5px;
+    box-shadow: 2px 0 8px 3px rgba(0, 0, 0, 0.1);
+}
+.captcha-input:focus{
+    outline: none;
+    border: 1px solid #fbd03d;
+}
+.inline{
+    display:inline-block;
+    padding: 16px 42px;
+}
+#captcha-btn{
+/*    box-shadow: 5px 5px 5px grey;*/
+    color: aqua;
+    margin: 10px;
+    background-color: brown;
+}
+.thankyou {
+    width: 7vh;
+}
+#thankyou .span {
+    font-size: 12px !important;
+}
+#thankyou  h6 {
+    font-weight: 700;
+    color: #8BC34A;
+}
+.netbanks {
+    width: 15px;
+}
+.gpsbtn {
+    padding: 7px;
+    background: #fbd03d;
+    border: none;
+    width: -webkit-fill-available;
+    box-shadow: 2px 0 8px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    color: #fff;
+}
+.addnewaddress {
+    background: none !important;
+    padding: 3px;
+    margin: 5px;
+    width: -webkit-fill-available;
+    border-bottom-style: groove;
+    border: 1px solid #969090;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important; 
+    font-size: 12px;
+    color: #8a8989;
+    padding: 5vh 0 1vh 0;
+}
+.addnew-card input::placeholder {
+    font-size: 12px;
+}
+.addnew-card input:focus {
+    outline: none;
+    border-bottom: 1px solid #fbd03d;
+}
+.addnew-card select:focus {
+    outline: none;
+    border-bottom: 1px solid #fbd03d;
+}
+.addnew {
+    padding: 9px !important;
+}
+.addnew-card {
+    border: none;
+        padding: 0px 45px;
+}
+.geo {
+    color: #2874f0;
+    font-weight: 700;
+    font-size: 12px;
+}
+#geo input:focus {
+    outline: none;
+    border-bottom: 1px solid #fbd03d;
+}
+#chgdeliveryadd h6  {
+    color: #525151;
+}
+.address p {
+    font-size: 12px;
+    padding: 0 27px 20px;
+    font-weight: 500;
+}
+.security-tagline {
+    font-size: 14px;
+    color: #525151;
+    font-weight: 600;
+}
+.cart-dis {
+    background: linear-gradient(62deg, #7e70e403, #5fc5da33);
+    box-shadow: none;
+    border-top: 1px solid #bebcbc;
+    margin: -16px -15px;
+}
+.coupons-card {
+    border: 1px solid #f8cea1 !important;
+    background: linear-gradient(to bottom right, #ffccff 0%, #ffffff 47%);
+    border-radius: 12px !important;
+    padding: 10px;
+    width: auto;
+    margin-right: 12px;
+}
+.coupons-card .detail {
+    color: #7a7676 !important;
+    font-size: 12px;
+    padding: 0 28px;
+    font-weight: 500;
+}
+.coupons-card a {
+    color: #f90630;
+    float: right;
+}
+.inner-card {
+    border: 1px dashed #ff6699 !important;
+    background: linear-gradient(to bottom right, #ffccff 0%, #ffffff 47%);
+    /*border-radius: 12px !important;*/
+    padding: 10px 30px;
+    width: auto;
+    /*margin-right: 12px;*/
+}
+.inner-card:before {
+    border: 1px dashed #ff6699;
+    content: "";
+    position: absolute;
+    top: 72%;
+    right: 10px;
+    height: 13px;
+    width: 8px;
+    background-color: #fff;
+    border-right: 0;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    z-index: 4;
+}
+.inner-card:after {
+    border: 1px dashed #ff6699;
+    content: "";
+    position: absolute;
+    top: 72%;
+    left: 10px;
+    height: 13px;
+    width: 8px;
+    background-color: #fff;
+    border-left: 0;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 4;
+}
+
+
+#cart-id .card-header {
+  background: #eee;
+  border-bottom: none;
+  padding: 0;
+}
+#cart-id .card-body {
+  background: #eee;
+  border-bottom: none;
+  padding: 0;
+  margin-top: -35px;
+}
+#cart-id .card-footer {
+  background: transparent;
+  border-top: none;
+  padding: 7px;
+}
+#cart-id .card-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+#cart-id .price {
+  font-size: 12px;
+  font-weight: bold;
+}
+#cart-id .del {
+  font-size: 12px;
+  color: #525151;
+  font-weight: lighter;
+}
+
+
+#w3lDemoBar.w3l-demo-bar {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 40px 5px;
+  padding-top:70px;
+  margin-bottom: 70px;
+  background: #0D1326;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+#w3lDemoBar.w3l-demo-bar a {
+  display: block;
+  color: #e6ebff;
+  text-decoration: none;
+  line-height: 24px;
+  opacity: .6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#w3lDemoBar.w3l-demo-bar span.w3l-icon {
+  display: block;
+}
+
+#w3lDemoBar.w3l-demo-bar a:hover {
+  opacity: 1;
+}
+
+#w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+  color: #e6ebff;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons {
+  margin-top: 30px;
+  border-top: 1px solid #41414d;
+  padding-top: 40px;
+}
+#w3lDemoBar.w3l-demo-bar .demo-btns {
+  border-top: 1px solid #41414d;
+  padding-top: 30px;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+  font-size: 26px;
+}
+#w3lDemoBar.w3l-demo-bar .no-margin-bottom{
+  margin-bottom:0;
+}
+.toggle-right-sidebar span {
+  background: #0D1326;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #e6ebff;
+  border-radius: 50px;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: .5;
+}
+.pull-right {
+  float: right;
+  position: fixed;
+  right: 0px;
+  top: 70px;
+  width: 90px;
+  z-index: 99999;
+  text-align: center;
+}
+/* ============================================================
+RIGHT SIDEBAR SECTION
+============================================================ */
+
+#right-sidebar {
+  width: 90px;
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  right: 0px;
+  top: 0;
+  margin-top: 60px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  overflow-y: auto;
+}
+
+
+/* ============================================================
+RIGHT SIDEBAR TOGGLE SECTION
+============================================================ */
+
+.hide-right-bar-notifications {
+  margin-right: -300px !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+
+@media (max-width: 992px) {
+  #w3lDemoBar.w3l-demo-bar a.desktop-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 767px) {
+  #w3lDemoBar.w3l-demo-bar a.tablet-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 568px) {
+  #w3lDemoBar.w3l-demo-bar a.mobile-mode{
+      display: none;
+  }
+  #w3lDemoBar.w3l-demo-bar .responsive-icons {
+      margin-top: 0px;
+      border-top: none;
+      padding-top: 0px;
+  }
+  #right-sidebar,.pull-right {
+      width: 90px;
+  }
+  #w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile{
+      margin-bottom: 0;
+  }
+}
+</style>
+<script src="../../../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<script>
+(function(){
+  if(typeof _bsa !== 'undefined' && _bsa) {
+      // format, zoneKey, segment:value, options
+      _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+    }
+})();
+</script>
+<script>
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+  // format, zoneKey, segment:value, options
+  _bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+}
+})();
+</script>
+<script>
+(function(){
+  if(typeof _bsa !== 'undefined' && _bsa) {
+      // format, zoneKey, segment:value, options
+      _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+    }
+})();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-98H8KRKT85'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-98H8KRKT85');
+</script>
+</head>
+<body>
+
+ <!-- top-header -->
+  <div class="agile-main-top">
+    <div class="container">
+      <div class="row main-top-w3l py-2">
+        <div class="col-lg-3 col-sm-4 header-most-top">
+          <!-- <p class=" text-lg-left text-center">Welcome to our shop!</p> -->
+          <div class="slogan2"><img src="imgs/slogan/222.png" class="slogan"></div>
+        </div>
+        <div class="col-lg-9 col-sm-8 header-right ml-auto text-sm-right text-center">
+          <!-- header lists -->
+          <ul class="top-header-lists">
+            <!-- <li>
+              <div id="location-details">
+                    <div style="display: inline-flex;">
+                     <b id="road"></b>&nbsp;<b id="city"></b>&nbsp;<b id="state"></b>&nbsp;<b id="postcode"></b>
+                    </div>
+                  </div>
+            </li>
+            <li>
+              <button class="button btn hover" onclick="displayLoading()">
+                <i class="fas fa-map-marker mr-1 "></i>Select Location</button>
+            </li>
+            <li><div id="loading"></div></li> -->
+            <li class="mx-3">
+              <a href="login.html" target="_blank">
+                <i class="fas fa-sign-in-alt mr-1"></i> Log In </a>
+                <img src="imgs/login.gif" id="hideMe" class="login-tooltip">
+            </li>
+            <li>
+              <a href="registration.html" target="_blank">
+                <i class="fas fa-sign-out-alt mr-1"></i>Register </a>
+            </li>
+          </ul>
+          <!-- //header lists -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //top-header -->
+  <!-- header-bottom-->
+  <div class="header-bot my-md-4 my-3" id="site-header">
+    <div class="container">
+      <div class="row header-bot_inner_wthreeinfo_header_mid align-items-center top-most">
+        <!-- logo -->
+        <div class="col-lg-3 col-md-3 col-sm-3 logo_agile">
+          <a href="index.html"><img src="imgs/logo/logo1.png"></a>
+        </div>
+        <!-- //logo -->
+        <!-- header-bot -->
+        <div class="col-lg-9 col-md-9 col-sm-9 header">
+          <div class="row">
+            <!-- search -->
+            <div class="col-lg-9 col-md-9 col-sm-9 agileits_search">
+              <form class="form-inline" action="#" method="post" style="max-width:600px;">
+                <input id="input-hint" class="form-control" type="search"
+                  placeholder="Search for products, brands and more" aria-label="Search" required>
+                <button class="btn" type="submit"><i class="fa fa-search"
+                    aria-hidden="true"></i></button>
+              </form>
+            </div>
+            <!-- //search -->
+            <!-- cart details -->
+            <div
+              class="col-lg-3 col-sm-4 top_nav_right text-center mt-sm-0 mt-2 d-flex align-items-center justify-content-between">
+              <div class="cart-store">
+              </div>
+              <div class="cart-store">
+                <a href="wishlist.html"><img src="imgs/wishlist.png" class="top-icons"></a>
+              </div>
+              <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+                <form action="#" method="post" class="last text-right">
+                  <input type="hidden" name="cmd" value="_cart">
+                  <input type="hidden" name="display" value="1">
+                  <nav class=" navbar-expand-lg ">
+                   <div class="" id="navbarSupportedContent">
+                     <button type="button" class="btn my-2 my-sm-0" data-toggle="modal" data-target="#staticBackdrop">
+                       <img src="imgs/cart.gif" class="top-icons"><sup class="marginright total-count"></sup></i>
+                     </button>
+                   </div>
+                 </nav>
+                </form>
+              </div>  
+              <div class="cart-store">
+                <button type="button" class="btn" data-toggle="modal" data-target="#chatbot">
+                  <img src="imgs/customer_support3.png" class="top-icons"></button>
+
+              </div>            
+            </div>
+            <!-- //cart details -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="chatbot" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="chat">
+  <div class="chat-title">
+    <h1>KIDZERA</h1>
+    <h2>You are chatting with a virtual agent</h2>
+    <figure class="avatar">
+      <img src="imgs/chatbot.webp" /></figure>      
+    <div  class="r-nav"> 
+     <ul>
+      <li> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="chat-close">&times;</span>
+          </button></li>      
+      <li>
+       <a><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjAuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iJiMxMDU3OyYjMTA4MzsmIzEwODY7JiMxMDgxO18xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDY0IDY0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2NCA2NDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfXzQ0MDQyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMxLjk5OTMiIHkxPSI3LjI0OTMiIHgyPSIzMS45OTkzIiB5Mj0iNTcuMjczMiIgc3ByZWFkTWV0aG9kPSJyZWZsZWN0Ij4KCTxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzFBNkRGRiIvPgoJPHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojQzgyMkZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxwYXRoIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfMV9fNDQwNDIpOyIgZD0iTTU3LjY0NSwzMS44NjRDNTcuMjg5LDMxLjMyMyw1Ni43MDYsMzEsNTYuMDg3LDMxaC0yLjExMUM1My40NDksMTgsNDIuODk4LDcuOTk5LDMwLDcuOTk5ICBDMTYuNzY2LDcuOTk5LDUuOTk5LDE4Ljc2Niw1Ljk5OSwzMlMxNi43NjYsNTYuMDAxLDMwLDU2LjAwMWM2LjI2NywwLDEyLjE5Ni0yLjQsMTYuNjk2LTYuNzU5bC0xLjM5MS0xLjQzOCAgQzQxLjE4LDUxLjgsMzUuNzQ0LDU0LjAwMSwzMCw1NC4wMDFDMTcuODY5LDU0LjAwMSw3Ljk5OSw0NC4xMzEsNy45OTksMzJTMTcuODY5LDkuOTk5LDMwLDkuOTk5QzQxLjc5Niw5Ljk5OSw1MS40NSwyMCw1MS45NzUsMzEgIGgtMi4wNjFjLTAuNjE5LDAtMS4yMDIsMC4zMjMtMS41NTksMC44NjRjLTAuMzk3LDAuNjA1LTAuNDY2LDEuMzk3LTAuMTc3LDIuMDY5bDIuMjY4LDUuMjgzYzAuNDcyLDEuMSwxLjQ1LDEuNzgzLDIuNTU0LDEuNzgzICBjMS4xMDQsMCwyLjA4Mi0wLjY4NCwyLjU1NC0xLjc4M2wyLjI2OC01LjI4M0M1OC4xMTEsMzMuMjYyLDU4LjA0MywzMi40NjksNTcuNjQ1LDMxLjg2NHogTTU1Ljk4NCwzMy4xNDVsLTIuMjY4LDUuMjgzICBjLTAuMzEzLDAuNzI3LTEuMTE5LDAuNzI3LTEuNDMyLDBsLTIuMjY4LTUuMjgzQzQ5Ljk5MywzMy4wODksNTAsMzMuMDM1LDUwLjAxLDMzaDUuOTgxQzU2LjAwMiwzMy4wMzUsNTYuMDA4LDMzLjA4OSw1NS45ODQsMzMuMTQ1ICB6Ii8+CjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMl9fNDQwNDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMzAiIHkxPSI3LjI0OTMiIHgyPSIzMCIgeTI9IjU3LjI3MzIiIHNwcmVhZE1ldGhvZD0icmVmbGVjdCI+Cgk8c3RvcCBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiMxQTZERkYiLz4KCTxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6I0M4MjJGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cGF0aCBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzJfXzQ0MDQyKTsiIGQ9Ik0yOS44NjQsMjQuNjQ0YzAuMzU1LDAuMjM0LDAuNzc2LDAuMzU0LDEuMTk5LDAuMzU0YzAuMjk2LDAsMC41OTMtMC4wNTgsMC44NjktMC4xNzcgIGw1LjI4NC0yLjI2OEMzOC4zMTcsMjIuMDgyLDM5LDIxLjEwMywzOSwyMHMtMC42ODQtMi4wODItMS43ODMtMi41NTRsLTUuMjg0LTIuMjY4Yy0wLjY3MS0wLjI4OC0xLjQ2NC0wLjIyMS0yLjA2OCwwLjE3NyAgQzI5LjMyMywxNS43MTEsMjksMTYuMjkzLDI5LDE2LjkxM3YyLjEzOEMyMiwxOS41NjQsMTcsMjUuMTY5LDE3LDMyYzAsNy4xNjgsNS44MzIsMTMsMTMsMTNzMTMtNiwxMy0xM2gtMmMwLDYtNC45MzUsMTEtMTEsMTEgIHMtMTEtNC45MzUtMTEtMTFjMC01LjcyOCw0LTEwLjQ0MiwxMC0xMC45NXYyLjAzNkMyOSwyMy43MDYsMjkuMzIzLDI0LjI4OCwyOS44NjQsMjQuNjQ0eiBNMzEsMTcuMDA5ICBjMC0wLjAxMiwwLjA4Ny0wLjAxNywwLjE0NCwwLjAwN2w1LjI4NCwyLjI2OEMzNi43OTEsMTkuNDQsMzcsMTkuNzAxLDM3LDIwYzAsMC4yOTktMC4yMDksMC41Ni0wLjU3MiwwLjcxNmwtNS4yODQsMi4yNjggIEMzMS4wODcsMjMuMDA3LDMxLDIzLjAwMiwzMSwyMi45OVYxNy4wMDl6Ii8+CjxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfM19fNDQwNDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjkuOTk5OSIgeTE9IjI2Ljk5OTkiIHgyPSIyOS45OTk5IiB5Mj0iMzcuNzYxOCIgc3ByZWFkTWV0aG9kPSJyZWZsZWN0Ij4KCTxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzZEQzdGRiIvPgoJPHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRTZBQkZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxjaXJjbGUgc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8zX180NDA0Mik7IiBjeD0iMzAiIGN5PSIzMiIgcj0iNCIvPgo8L3N2Zz4K" width="26px"/></a>
+     </li>
+     </ul>
+     </div>
+  </div>
+  <div class="messages">
+    <div class="messages-content"></div>
+  </div>
+  <div class="message-box">
+    <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+    <button type="submit" class="message-submit sound-on-click">Send</button>
+  </div>
+</div>
+<div class="bg"></div>
+  </div>
+
+
+
+  <!-- shop locator (popup) -->
+  <!-- //header-bottom -->
+  <!-- navigation -->
+  <div class="navbar-inner">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="agileits-navi_search">
+          <form action="#" method="post">
+            <select id="agileinfo-nav_search" name="agileinfo_search" required="" onchange="(this.options[this.selectedIndex].value?  window.open(this.options[this.selectedIndex].value,'_blank'):'')">
+              <option value="">All Categories</option>
+              <option value="toys and gaming.html">Toys & Gaming</option>
+              <option value="gear.html">Gear</option>
+              <option value="fashion accessories.html">Fashion Accessories</option>
+            </select>
+          </form>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav text-center ml-auto">
+            <li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="toys and gaming.html">Toys & Gaming</a>
+                <a class="dropdown-item" href="fashion accessories.html">Gear</a>
+                <a class="dropdown-item" href="gear.html">Fashion Accessories</a>
+              </div>
+            </li> 
+            <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+              <a class="nav-link" href="product.html">New Arrivals</a>
+            </li> 
+            <!-- <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+              <a class="nav-link" href="#">Blog</a>
+            </li> -->         
+            <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="help.html">Help</a>
+            </li>
+            <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="Account/Profile.html"><i class="fas fa-user"></i>&nbsp; My Profile</a>
+                <a class="dropdown-item" href="checkout_payment.html"><i class="fas fa-shopping-cart"></i>&nbsp; My Cart</a>
+                <!-- <a class="dropdown-item" href="Account/Profile.html#wishlist-info"><i class="fas fa-heart"></i>&nbsp; My Wishlist</a>
+                <a class="dropdown-item" href="Account/gift-card.html"><i class="fas fa-tag"></i>&nbsp; Gift Cards</a> -->
+                <a class="dropdown-item" href="Account/rewards.html"><i class="fas fa-gift"></i>&nbsp; Rewards</a>
+                <a class="dropdown-item" href="Account/order.html"><i class="fas fa-box"></i>&nbsp; My Orders</a>
+                <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- //navigation -->
+
+  
+  <!-- page -->
+  <div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+
+    </div>
+  </div>
+  <!-- //page -->
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+
+ 
+</div> 
+
+<!-- new cart -->
+<div id="cart-id" class="privacy py-5">
+    <div class="container py-md-5 py-4">
+      <div class="checkout-right">
+        <div class="table-responsive">
+          <table class="timetable_sub">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody class="show-cart table"></tbody>
+          </table>          
+            <div class="grand-total">Total price: ₹<span class="total-cart"></span></div>
+        </div>
+      </div>
+    </div>
+</div>          
+<!-- end of new cart -->
+ 
+
+  <!-- left part for delivery address and other products -->
+  <div id="cart-id">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <div class="">
+            <div class="cart-card">
+              <div>
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8">
+                    <h5><b>Deliver to Kanchan,</b></h5>
+                    <div id="location-details">
+                    <p class="loct">
+                     <b id="road"></b>&nbsp;<b id="city"></b>&nbsp;<b id="state"></b>&nbsp;<b id="postcode"></b>
+                    </p>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="checkout right">
+                     <button class="current button btn" onclick="displayLoading()"><img src="imgs/geo.gif" loop=infinite class="geo-img"><span class="geo">USE CURRENT LOCATION</span></button><br>
+                     <div class="oroption">
+                      <div class="qrhrline">
+                       <span class="orcode">OR</span>
+                      </div>
+                     </div>
+                     <br>
+                     <button type="submit" class="btn btn-style-secondary add-new" data-toggle="modal" data-target="#chgdeliveryadd">ADD NEW</i></button><div id="loading"></div>
+                   </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="cart-dis">
+                <div class="scrollmenu">
+                <div class="card text-center cashback-off">
+              <div class="bnkkoffr">
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="inner-header">
+                      <div class="card-offer">
+                       <p><img src="imgs/SIMPLLOGO.jpeg">
+                       Flat ₹75 Off</p>
+                       <p>1st ever SIMPL Txn on Kidzera | Above ₹999</p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card-offer">
+                      <span>1/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <div class="card text-center cashback-off">
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="inner-header">
+                      <div class="card-offer">
+                       <p><img src="imgs/PNBlogo_v6.webp">
+                       15% Off Upto ₹600</p>
+                       <p>on PNB Credit Cards | Above ₹2499 </p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card-offer">
+                      <span>2/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <div class="card text-center cashback-off">
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="inner-header">
+                      <div class="card-offer">
+                       <p><img src="imgs/j&k.png">
+                       15% Off Upto ₹600</p>
+                       <p>on J&K Bank Mastercard Cards | Above ₹1499</p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card-offer">
+                      <span>3/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <div class="card text-center cashback-off">
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="inner-header">
+                      <div class="card-offer">
+                       <p><img src="imgs/PaytmLogo_v6.webp">
+                       Cashback Upto ₹100</p>
+                       <p>on Paytm UPI Lite/UPI Txns | Above ₹999</p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card-offer">
+                      <span>4/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <div class="card text-center cashback-off">
+              <div class="">
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="inner-header">
+                      <div class="card-offer">
+                       <p><img src="imgs/Cred_logo.webp">
+                       Upto ₹250 Cashback</p>
+                       <p>on CRED UPI Txns | Above ₹999</p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card-offer">
+                      <span>5/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+              </div>               
+            </div>
+          </div>  
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                 <h2 class="mb-0">
+        <p class="my-3">
+        <b>You May Also Like</b>
+        </p>
+      </h2>      
+      <div class="scrollmenu">
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>50%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/brainly/2.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Blue Orange Kingdomino Game</p>
+            <span class="price">₹ 799.00
+            <del class="del">₹ 1,799.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Blue Orange Kingdomino Game" data-price="799" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div> 
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>45%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/rocker/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Felio 3in1 Rocker / Bouncer</p>
+            <span class="price">₹ 3,499.00
+            <del class="del">₹ 7,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Felio 3in1 Rocker / Bouncer" data-price="799" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>30%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/carseat/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Safety Fix Car Seat</p>
+            <span class="price">₹ 8,999.00
+            <del class="del">₹ 17,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Safety Fix Car Seat" data-price="8999" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>35%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/wheel/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Hot Wheels Basic Car</p>
+            <span class="price">₹ 179.00
+            <del class="del">₹ 399.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Hot Wheels Basic Car" data-price="399" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>15%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/wheel/4.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Hot Wheels Track </p>
+            <span class="price">₹ 399.00
+            <del class="del">₹ 499.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Hot Wheels Track" data-price="399" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>25%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/viga/2.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Viga Construction Block Set</p>
+            <span class="price">₹ 1,999.00
+            <del class="del">₹ 2,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Viga Construction Block Set" data-price="1999" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>40%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/viga/3.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Viga Touch & Match Board</p>
+            <span class="price">₹ 899.00
+            <del class="del">₹ 1,499.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Viga Touch & Match Board" data-price="899" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>54%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/house/4.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Step2 Seaside Villa Playhouse</p>
+            <span class="price">₹ 54,999.00
+            <del class="del">₹ 59,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Step2 Seaside Villa Playhouse" data-price="59999" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>       
+      </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h2 class="mb-0">
+        <p class="my-3">
+        <b>Frequently Bought Together</b>
+        </p>
+      </h2>      
+      <div class="scrollmenu">
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>50%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/house/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Wooden Playhouse -White</p>
+            <span class="price">₹ 69,999.00
+            <del class="del">₹ 79,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Wooden Playhouse -White" data-price="69999" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div> 
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>45%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/trampoline/2.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Climb 'n Slide Trampoline</p>
+            <span class="price">₹ 1,099.00
+            <del class="del">₹ 1,599.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Climb 'n Slide Trampoline" data-price="1099" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>30%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/educational/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Peaceable Kingdom Race</p>
+            <span class="price">₹ 799.00
+            <del class="del">₹ 1,599.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Peaceable Kingdom Race" data-price="799" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>35%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/educational/2.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Peaceable Kingdom Topper</p>
+            <span class="price">₹ 899.00
+            <del class="del">₹ 1,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Peaceable Kingdom Topper" data-price="899" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>15%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/highchair/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Yummy Highchair</p>
+            <span class="price">₹ 6,499.00
+            <del class="del">₹ 12,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Yummy Highchair" data-price="6499" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>25%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/highchair/3.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Enock Highchair </p>
+            <span class="price">₹ 8,999.00
+            <del class="del">₹ 19,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Enock Highchair " data-price="8999" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>40%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/barbie/3.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Barbie Team Stacie</p>
+            <span class="price">₹ 1,599.00
+            <del class="del">₹ 1,999.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Barbie Team Stacie" data-price="1599" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>
+        <div class="featured-card">
+          <div class="card-header">
+            <div class="dis-price-section">
+            <div class="dis-price">
+              <span>54%</span>
+              <span>OFF</span>
+            </div>
+          </div>
+          </div>
+          <div class="card-body">
+            <img src="imgs/nerf/1.png">
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Elite Disruptor Toy Blaster</p>
+            <span class="price">₹ 1,099.00
+            <del class="del">₹ 1,399.00</del></span>
+          </div>
+          <div class="featured-content-list">
+              <button type="button" data-name="Elite Disruptor Toy Blaster" data-price="1099" class="btn add-to-cart default-btn border-radius-5">Add to cart</button>
+          </div>
+        </div>       
+      </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="gift-card">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <p><img src="imgs/coupons.svg">
+              <span>&nbsp; Apply Coupon</span>
+              <a href="#" data-toggle="modal" data-target="#coupons" class="link right">View All</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <input type="text" name="" placeholder="Coupon Code">
+            </div><br><br>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <button type="submit" class="btnn">APPLY</button>
+            </div>
+          </div><hr>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <p><img src="imgs/gift-certificate.svg">
+              <span>&nbsp; Have a Gift Certificate?</span></p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <input type="text" name="" placeholder="Voucher Number">
+              </div><br><br>
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <button type="submit" class="btnn">APPLY</button>
+              </div>
+          </div><hr>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <img src="imgs/free delivery3.jpg" class="delivery-img"><br><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <h6><b>Payment Information</b></h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="table-responsive">
+              <table>
+                <tr>
+                  <td>Value of Products</td>
+                  <td>: <span class="total-cart"></span></td>
+                </tr>
+                <tr style="color: #27A63F;">
+                  <td>Discount(-)</td>
+                  <td>: ₹ 0</td>
+                </tr>
+                <tr>
+                  <td>Estimated GST (+)</td>
+                  <td>: ₹ 0</td>
+                </tr>
+                <tr>
+                  <td>Shipping (+)</td>
+                  <td style="color: #27A63F;">: FREE</td>
+                  <td><del>₹ 40</del></td>
+                </tr>
+                <tr>
+                  <td>Order Total</td>
+                  <td>: <span class="total-cart"></span></td>
+                </tr>
+                <tr>
+                  <td>Net Payment</td>
+                  <td>: <span class="total-cart"></span></td>
+                </tr>
+              </table>
+              </div><br>
+              <div id="main">
+                <button type="submit" class="debit-btn" onclick="openNav()"><b>PLACE ORDER</b></button>
+              </div>
+            </div>
+          </div><br><hr>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <img src="imgs/card.png" style="width: -webkit-fill-available;">
+            </div>
+          </div><hr>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <p class="font-safe"><img src="imgs/shield_5f9216.png" class="shield"><b> &nbsp;Safe and Secure Payments. Easy returns. 100% Authentic products.<b></p>
+            </div>
+          </div>                    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- end of left part for delivery address and other products -->
+
+
+  <!-- change deliver address -->
+       <div class="modal fade" id="chgdeliveryadd" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5><b>Select Delivery Address</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="address">
+            <div class="row" style="margin-left: 0;">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <input type="radio" name="">&nbsp; Kanchan Thakur
+                <p>4-158/9 5th Cross Road Sainik Puri, Delhi 110511</p>
+              </div>
+            </div>
+            <div class="accordion" id="accordionExample2"> 
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <input type="radio" data-toggle="collapse" data-target="#collapsechgadd" aria-expanded="true" aria-controls="collapseOne">&nbsp; Add a new address
+                </div>
+              </div>              
+              <div id="collapsechgadd" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
+                <div class="addnew-card">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <input type="text" name="" placeholder="House no./Building Name *" class="addnewaddress">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <input type="text" name="" placeholder="Road Name/Area/Colony *" class="addnewaddress">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <input type="text" name="" placeholder="Pincode *" class="addnewaddress">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input type="text" name="" placeholder="City" class="addnewaddress">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <!-- <input type="text" name="" placeholder="Aletrnate Phone (Optional)" class="addnewaddress"> -->
+                      <select class="addnewaddress">
+                       <option value="state">State *</option>
+                       <option value="AP">Andhra Pradesh</option>
+                       <option value="AR">Arunachal Pradesh</option>
+                       <option value="AS">Assam</option>
+                       <option value="BR">Bihar</option>
+                       <option value="CT">Chhattisgarh</option>
+                       <option value="GA">Gujarat</option>
+                       <option value="HR">Haryana</option>
+                       <option value="HP">Himachal Pradesh</option>
+                       <option value="JK">Jammu and Kashmir</option>
+                       <option value="GA">Goa</option>
+                       <option value="JH">Jharkhand</option>
+                       <option value="KA">Karnataka</option>
+                       <option value="KL">Kerala</option>
+                       <option value="MP">Madhya Pradesh</option>
+                       <option value="MH">Maharashtra</option>
+                       <option value="MN">Manipur</option>
+                       <option value="ML">Meghalaya</option>
+                       <option value="MZ">Mizoram</option>
+                       <option value="NL">Nagaland</option>
+                       <option value="OR">Odisha</option>
+                       <option value="PB">Punjab</option>
+                       <option value="RJ">Rajasthan</option>
+                       <option value="SK">Sikkim</option>
+                       <option value="TN">Tamil Nadu</option>
+                       <option value="TG">Telangana</option>
+                       <option value="TR">Tripura</option>
+                       <option value="UT">Uttarakhand</option>
+                       <option value="UP">Uttar Pradesh</option>
+                       <option value="WB">West Bengal</option>
+                       <option value="AN">Andaman and Nicobar Islands</option>
+                       <option value="CH">Chandigarh</option>
+                       <option value="DN">Dadra and Nagar Haveli</option>
+                       <option value="DD">Daman and Diu</option>
+                       <option value="DL">Delhi</option>
+                       <option value="LD">Lakshadweep</option>
+                       <option value="PY">Puducherry</option>
+                      </select>
+                    </div>
+                  </div>
+                    <p class="addnew">Address Type</p>
+                    <div class="row addnew">
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <input type="radio" name=""><span>Home</span>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <input type="radio" name=""><span>Office</span>
+                      </div>
+                    </div><br>
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <button type="submit" class="debit-btn">SAVE ADDRESS</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div><hr> 
+                  <label>&nbsp; <b>Use pincode to check delivery info</b></label><br><br> 
+                  <div class="row" id="geo">
+                    <div class="col-lg-9 col-md-9 col-sm-9">
+                      <input type="text" name="" class="addnewaddress" placeholder="Enter Pincode">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                      <button type="submit" class="debit-btn">Submit</button>
+                    </div>                    
+                  </div>      
+                </div>
+              </div>
+            </div>  
+            </div>          
+        </div>
+      </div>
+
+
+       <!-- end of change delivery address -->
+
+
+       <!-- open sidebar payment options card -->
+
+     <div id="mySidebar" class="sidebar">
+      <div class="card-header shadow top">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+      </a>&nbsp; Payment Method</div>
+      
+       
+<!-- accordions tabs for payment card  -->
+<div class="card" style="padding: 15px;">
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <p class="font-black"><img src="imgs/cardb.png" class="pay-icons"> &nbsp;Credit/Debit Card</p>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="">
+        <div class="card-body">
+
+          <div class="debit-credit">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <img src="images/pay1.png">
+                <img src="images/pay2.png">
+                <img src="images/pay3.png">
+                <img src="images/pay6.png">
+              </div>
+            </div><br>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <label class="label">Card Number *</label>
+              <input type="text" name="" placeholder="xxxx xxxx xxxx" class="debit-card" required>
+            </div>
+          </div>
+          <div class="row credit-card">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <label class="label">Expiry Date *</label>
+              <input type="text" name="" placeholder="Valid Thru (MM/YY)" class="debit-card" required>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <label class="label">CVV *</label>
+              <input type="text" name="" placeholder="CVV" class="debit-card" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <input type="checkbox" name="" class="checkbox">
+              <span class="cod-options">Secure your card as per RBI guidelines</span>
+            </div>
+          </div>
+          <a href="otp.html" style="padding: 0;font-size: 15px;"><button class="debit-btn" type="submit"><b>PAY NOW</b></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <p class="font-black"><img src="imgs/bnpl_rd.svg" class="pay-icons"> &nbsp;Buy now Pay Later</p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="simpl-card">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <p><img src="imgs/newpay_simpl.svg">&nbsp; SIMPL <input type="Radio" class="right" checked></p>
+            <p class="label" style="color: #fdb03d;">Link Account</p>
+          </div>
+        </div><br>
+        <label class="label">Enter your registered mobile number *</label>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <input type="text" name="" class="debit-card" placeholder="+91-XXXXXXXXXX" required>
+          </div>
+        </div>
+        <button class="debit-btn" type="submit">PAY NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <p class="font-black"><img src="imgs/upi_rd.svg" class="pay-icons"> &nbsp;UPI &nbsp; <img src="imgs/upi.gif" class="pay-icons"></p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="simpl-card">
+          <div class="upi">
+            <center><h5>Pay With UPI</h5><hr>
+            <p>Click to view and Scan the QR Code with your preferred UPI App</p></center>
+            <div class="scanqr_code">
+                <img src="imgs/blurqrcode.webp">
+                <button type="submit" class="generateqrbtn">GENERATE QR CODE</button>
+            </div>
+            <div class="oroption">
+            <div class="qrhrline">
+              <span class="orcode">OR</span>
+            </div>
+          </div><br>
+          <center><p>Please provide valid UPI handle i.e (Virtual Payment Address)</p>
+          <input type="text" class="debit-card" name="" placeholder="EX-mobileno@ybl or userid@okhdfc"></center>
+          <button type="button" class="debit-btn">PAY NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <p class="font-black"><img src="imgs/netbanking_rd.svg" class="pay-icons"> &nbsp;Net Banking</button></p>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="simpl-card">
+                <div class="netbanking">
+                  <center><h5>Popular Banks</h5></center><hr>
+                  <input type="radio" name="radio">
+                  <label><img src="imgs/netbanks/hdfc.svg" class="netbanks">&nbsp; HDFC Bank</label><br><br>
+                  <input type="radio" name="radio">
+                  <label><img src="imgs/netbanks/icici.svg" class="netbanks">&nbsp; ICICI Bank</label><br><br>
+                  <input type="radio" name="radio">
+                  <label><img src="imgs/netbanks/axis.svg" class="netbanks">&nbsp; Axis Bank</label><br><br>
+                  <input type="radio" name="radio">
+                  <label><img src="imgs/netbanks/kotak.svg" class="netbanks">&nbsp; Kotak Mahindra Bank</label><br><br>
+                  <input type="radio" name="radio">
+                  <label><img src="imgs/netbanks/sbi.svg" class="netbanks">&nbsp; State Bank Of India</label><br><br>
+                  <div class="section_room_pay">
+                    <select class="year debit-card" style="width: 100% !important;">
+                      <label>Other Banks</label>
+                      <option value="">--- Select Banks ---</option>
+                      <option value="ALB-NA">Allahabad Bank NetBanking</option>
+                      <option value="ADB-NA">Andhra Bank</option>
+                      <option value="BBK-NA">Bank of Bahrain and Kuwait NetBanking</option>
+                      <option value="BBC-NA">Bank of Baroda Corporate NetBanking</option>
+                      <option value="BBR-NA">Bank of Baroda Retail NetBanking</option>
+                      <option value="BOI-NA">Bank of India NetBanking</option>
+                      <option value="BOM-NA">Bank of Maharashtra NetBanking</option>
+                      <option value="CSB-NA">Catholic Syrian Bank NetBanking</option>
+                      <option value="CBI-NA">Central Bank of India</option>
+                      <option value="CUB-NA">City Union Bank NetBanking</option>
+                      <option value="CRP-NA">Corporation Bank</option>
+                      <option value="DBK-NA">Deutsche Bank NetBanking</option>
+                      <option value="DCB-NA">Development Credit Bank</option>
+                      <option value="DC2-NA">Development Credit Bank - Corporate</option>
+                      <option value="DLB-NA">Dhanlaxmi Bank NetBanking</option>
+                      <option value="FBK-NA">Federal Bank NetBanking</option>
+                      <option value="IDS-NA">Indusind Bank NetBanking</option>
+                      <option value="IOB-NA">Indian Overseas Bank</option>
+                      <option value="ING-NA">ING Vysya Bank (now Kotak)</option>
+                      <option value="JKB-NA">Jammu and Kashmir NetBanking</option>
+                      <option value="JSB-NA">Janata Sahakari Bank Limited</option>
+                      <option value="KBL-NA">Karnataka Bank NetBanking</option>
+                      <option value="KVB-NA">Karur Vysya Bank NetBanking</option>
+                      <option value="LVR-NA">Lakshmi Vilas Bank NetBanking</option>
+                      <option value="OBC-NA">Oriental Bank of Commerce NetBanking</option>
+                      <option value="CPN-NA">PNB Corporate NetBanking</option>
+                      <option value="PNB-NA">PNB NetBanking</option>
+                      <option value="RSD-DIRECT">Rajasthan State Co-operative Bank-Debit Card
+                      </option>
+                      <option value="RBS-NA">RBS (The Royal Bank of Scotland)</option>
+                      <option value="SWB-NA">Saraswat Bank NetBanking</option>
+                      <option value="SBJ-NA">SB Bikaner and Jaipur NetBanking</option>
+                      <option value="SBH-NA">SB Hyderabad NetBanking</option>
+                      <option value="SBM-NA">SB Mysore NetBanking</option>
+                      <option value="SBT-NA">SB Travancore NetBanking</option>
+                      <option value="SVC-NA">Shamrao Vitthal Co-operative Bank</option>
+                      <option value="SIB-NA">South Indian Bank NetBanking</option>
+                      <option value="SBP-NA">State Bank of Patiala NetBanking</option>
+                      <option value="SYD-NA">Syndicate Bank NetBanking</option>
+                      <option value="TNC-NA">Tamil Nadu State Co-operative Bank NetBanking
+                      </option>
+                      <option value="UCO-NA">UCO Bank NetBanking</option>
+                      <option value="UBI-NA">Union Bank NetBanking</option>
+                      <option value="UNI-NA">United Bank of India NetBanking</option>
+                      <option value="VJB-NA">Vijaya Bank NetBanking</option>
+                    </select>
+                  </div><br>
+                  <button type="submit" class="debit-btn">PAY NOW</button>
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+          <p class="font-black"><img src="imgs/emi_mainico.svg" class="pay-icons"> &nbsp;EMI</p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="simpl-card">
+          <center><h5>Pay With EMI</h5><hr>
+          <div id="emi-detail">
+            <div class="row" id="agree">
+              <img src="imgs/alert.png"><p> &nbsp; Pay in easy monthly installments from any of the options below.<a href="#">Terms and Conditions</a></p>
+            </div>
+            <div id="accordion">
+             <div class="card">
+               <div class="card-header" id="emione">
+                 <h5 class="mb-0">
+                   <button class="btn btn-link" data-toggle="collapse" data-target="#emitab" aria-expanded="true" aria-controls="emitab">Credit/Debit Card EMI<i class="fas fa-chevron-down right emicon"></i></button>
+                 </h5>
+               </div>
+               <div id="emitab" class="collapse" aria-labelledby="emione" data-parent="#accordion">
+                 <div class="card-body">
+                   <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12">
+                      <select class="year debit-card" style="width: 100% !important;">
+                        <label>Other Banks</label>
+                        <option value="">--- Select Banks ---</option>
+                        <option value="ALB-NA">Allahabad Bank Credit Card</option>
+                        <option value="ADB-NA">Andhra Bank</option>
+                        <option value="AXI-NA">Axis Bank</option>
+                        <option value="BBK-NA">Bank of Bahrain and Kuwait Credit Card</option>
+                        <option value="BBC-NA">Bank of Baroda Corporate Credit Card</option>
+                        <option value="BBR-NA">Bank of Baroda Retail Credit Card</option>
+                        <option value="BOI-NA">Bank of India Credit Card</option>
+                        <option value="BOM-NA">Bank of Maharashtra Credit Card</option>
+                        <option value="CSB-NA">Catholic Syrian Bank Credit Card</option>
+                        <option value="CBI-NA">Central Bank of India</option>
+                        <option value="CUB-NA">City Union Bank Credit Card</option>
+                        <option value="CRP-NA">Corporation Bank</option>
+                        <option value="DBK-NA">Deutsche Bank Credit Card</option>
+                        <option value="DCB-NA">Development Credit Bank</option>
+                        <option value="DC2-NA">Development Credit Bank - Corporate</option>
+                        <option value="DLB-NA">Dhanlaxmi Bank Credit Card</option>
+                        <option value="FBK-NA">Federal Bank Credit Card</option>
+                        <option value="HDF-NA">HDFC Bank Credit Card</option>
+                        <option value="ICI-NA">ICICI Bank Credit Card</option>
+                        <option value="IDS-NA">Indusind Bank Credit Card</option>
+                        <option value="IOB-NA">Indian Overseas Bank</option>
+                        <option value="ING-NA">ING Vysya Bank (now Kotak)</option>
+                        <option value="JKB-NA">Jammu and Kashmir Credit Card</option>
+                        <option value="JSB-NA">Janata Sahakari Bank Limited</option>
+                        <option value="KBL-NA">Karnataka Bank Credit Card</option>
+                        <option value="KVB-NA">Karur Vysya Bank Credit Card</option>
+                        <option value="KBK-NA">Kotak Mahindra Bank Credit Card</option>
+                        <option value="LVR-NA">Lakshmi Vilas Bank Credit Card</option>
+                        <option value="OBC-NA">Oriental Bank of Commerce Credit Card</option>
+                        <option value="CPN-NA">PNB Corporate Credit Card</option>
+                        <option value="PNB-NA">PNB Credit Card</option>
+                        <option value="RSD-DIRECT">Rajasthan State Co-operative Bank-Debit Card</option>
+                        <option value="RBS-NA">RBS (The Royal Bank of Scotland)</option>
+                        <option value="SWB-NA">Saraswat Bank Credit Card</option>
+                        <option value="SBJ-NA">SB Bikaner and Jaipur Credit Card</option>
+                        <option value="SBH-NA">SB Hyderabad Credit Card</option>
+                        <option value="SBM-NA">SB Mysore Credit Card</option>
+                        <option value="SBT-NA">SB Travancore Credit Card</option>
+                        <option value="SVC-NA">Shamrao Vitthal Co-operative Bank</option>
+                        <option value="SIB-NA">South Indian Bank Credit Card</option>
+                        <option value="SBI-NA">State Bank of India Credit Card</option>
+                        <option value="SBP-NA">State Bank of Patiala Credit Card</option>
+                        <option value="SYD-NA">Syndicate Bank Credit Card</option>
+                        <option value="TNC-NA">Tamil Nadu State Co-operative Bank Credit Card</option>
+                        <option value="UCO-NA">UCO Bank Credit Card</option>
+                        <option value="UBI-NA">Union Bank Credit Card</option>
+                        <option value="UNI-NA">United Bank of India Credit Card</option>
+                        <option value="VJB-NA">Vijaya Bank Credit Card</option>
+                      </select>
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12">
+                       <div id="accordion1">
+                        <div class="card">
+                          <div class="card-header" id="emitabone">
+                            <h5 class="mb-0 left-p">
+                              <button class="btn btn-link black" data-toggle="collapse" data-target="#emitab1" aria-expanded="true" aria-controls="emitab1"><input type="radio">₹ 7,525 for 3 months <span class="grey"> &nbsp; @ 14% p.a.</span></button>
+                            </h5>
+                          </div>
+                          <div id="emitab1" class="collapse" aria-labelledby="emitabone" data-parent="#accordion1">
+                           <div class="card-body">
+                             <div class="table-responsive">
+                              <table>
+                               <tr>
+                                 <td>EMI Value</td>
+                                 <td>: <span class="total-cart"></span></td>
+                               </tr>
+                               <tr class="dashed">
+                                 <td>Interest (charged by Bank)</td>
+                                 <td>: ₹ 517</td>
+                               </tr>
+                               <tr>
+                                 <td>Total EMI for 3 months</td>
+                                 <td>: ₹ 22,575</td>
+                               </tr>                
+                              </table><br>
+                              <button class="add-to-cart" type="button">CHOOSE THIS PLAN</button>
+                             </div> 
+                           </div>
+                         </div>
+                         <div class="card-header" id="emitabtwo">
+                            <h5 class="mb-0 left-p">
+                              <button class="btn btn-link black" data-toggle="collapse" data-target="#emitab2" aria-expanded="true" aria-controls="emitab2"><input type="radio">₹ 3,828 for 6 months <span class="grey"> &nbsp; @ 14% p.a.</span></button>
+                            </h5>
+                          </div>
+                          <div id="emitab2" class="collapse" aria-labelledby="emitabtwo" data-parent="#accordion1">
+                           <div class="card-body">
+                             <div class="table-responsive">
+                              <table>
+                               <tr>
+                                 <td>EMI Value</td>
+                                 <td>: <span class="total-cart"></span></td>
+                               </tr>
+                               <tr class="dashed">
+                                 <td>Interest (charged by Bank)</td>
+                                 <td>: ₹ 910</td>
+                               </tr>
+                               <tr>
+                                 <td>Total EMI for 3 months</td>
+                                 <td>: ₹ 22,968</td>
+                               </tr>                
+                              </table><br>
+                              <button class="add-to-cart" type="button">CHOOSE THIS PLAN</button>
+                             </div> 
+                           </div>
+                         </div>
+                         <div class="card-header" id="emitabthree">
+                            <h5 class="mb-0 left-p">
+                              <button class="btn btn-link black" data-toggle="collapse" data-target="#emitab3" aria-expanded="true" aria-controls="emitab3"><input type="radio">₹ 2,597 for 5 months <span class="grey"> &nbsp; @ 14% p.a.</span></button>
+                            </h5>
+                          </div>
+                          <div id="emitab3" class="collapse" aria-labelledby="emitabthree" data-parent="#accordion1">
+                           <div class="card-body">
+                             <div class="table-responsive">
+                              <table>
+                               <tr>
+                                 <td>EMI Value</td>
+                                 <td>: <span class="total-cart"></span></td>
+                               </tr>
+                               <tr class="dashed">
+                                 <td>Interest (charged by Bank)</td>
+                                 <td>: ₹ 1,307</td>
+                               </tr>
+                               <tr>
+                                 <td>Total EMI for 3 months</td>
+                                 <td>: ₹ 23,365</td>
+                               </tr>                
+                              </table><br>
+                              <button class="add-to-cart" type="button">CHOOSE THIS PLAN</button>
+                             </div> 
+                           </div>
+                         </div>
+                         <div class="card-header" id="emitabfour">
+                            <h5 class="mb-0 left-p">
+                              <button class="btn btn-link black" data-toggle="collapse" data-target="#emitab4" aria-expanded="true" aria-controls="emitab4"><input type="radio">₹ 1,981 for 12 months <span class="grey"> &nbsp; @ 14% p.a.</span></button>
+                            </h5>
+                          </div>
+                          <div id="emitab4" class="collapse" aria-labelledby="emitabfour" data-parent="#accordion1">
+                           <div class="card-body">
+                             <div class="table-responsive">
+                              <table>
+                               <tr>
+                                 <td>EMI Value</td>
+                                 <td>: <span class="total-cart"></span></td>
+                               </tr>
+                               <tr class="dashed">
+                                 <td>Interest (charged by Bank)</td>
+                                 <td>: ₹ 1,709</td>
+                               </tr>
+                               <tr>
+                                 <td>Total EMI for 3 months</td>
+                                 <td>: ₹ 23,767</td>
+                               </tr>                
+                              </table><br>
+                              <button class="add-to-cart" type="button">CHOOSE THIS PLAN</button>
+                             </div> 
+                           </div>
+                         </div>
+                         <div class="card-header" id="emitabfive">
+                            <h5 class="mb-0 left-p">
+                              <button class="btn btn-link black" data-toggle="collapse" data-target="#emitab5" aria-expanded="true" aria-controls="emitab5"><input type="radio">₹ 1,377 for 18 months <span class="grey"> &nbsp; @ 15% p.a.</span></button>
+                            </h5>
+                          </div>
+                          <div id="emitab5" class="collapse" aria-labelledby="emitabfive" data-parent="#accordion1">
+                           <div class="card-body">
+                             <div class="table-responsive">
+                              <table>
+                               <tr>
+                                 <td>EMI Value</td>
+                                 <td>: <span class="total-cart"></span></td>
+                               </tr>
+                               <tr class="dashed">
+                                 <td>Interest (charged by Bank)</td>
+                                 <td>: ₹ 2,712</td>
+                               </tr>
+                               <tr>
+                                 <td>Total EMI for 3 months</td>
+                                 <td>: ₹ 24,770</td>
+                               </tr>                
+                              </table><br>
+                              <button class="add-to-cart" type="button">CHOOSE THIS PLAN</button>
+                             </div> 
+                           </div>
+                         </div>
+                         <div class="card-header" id="emitabsix">
+                            <h5 class="mb-0 left-p">
+                              <button class="btn btn-link black" data-toggle="collapse" data-target="#emitab6" aria-expanded="true" aria-controls="emitab6"><input type="radio">₹ 1,070 for 24 months <span class="grey"> &nbsp; @ 15% p.a.</span></button>
+                            </h5>
+                          </div>
+                          <div id="emitab6" class="collapse" aria-labelledby="emitabsix" data-parent="#accordion1">
+                           <div class="card-body">
+                             <div class="table-responsive">
+                              <table>
+                               <tr>
+                                 <td>EMI Value</td>
+                                 <td>: <span class="total-cart"></span></td>
+                               </tr>
+                               <tr class="dashed">
+                                 <td>Interest (charged by Bank)</td>
+                                 <td>: ₹ 3,611</td>
+                               </tr>
+                               <tr>
+                                 <td>Total EMI for 3 months</td>
+                                 <td>: ₹ 25,669</td>
+                               </tr>                
+                              </table><br>
+                              <button class="add-to-cart" type="button">CHOOSE THIS PLAN</button>
+                             </div> 
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree" onclick="generate()">
+          <p class="font-black"><img src="imgs/cod_rd.svg" class="pay-icons"> &nbsp;Cash on Delivery</p>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="cod">
+          <div class="simpl">
+            <p class="cod-text"><b><img src="imgs/graph-up.png" class="graph-icon">
+            <span style="color: #27A63F">10254</span>&nbsp; Customers have chosen online payments in last few days for:</b></p><br>
+            <div class="cod-spacing">
+            <p>
+              <img src="imgs/cashless_rd.svg">
+              <span class="cod-options">&nbsp; Cashless Delivery</span>
+            </p>
+            <p>
+              <img src="imgs/easy_returns.svg">
+              <span class="cod-options">&nbsp; Easy & hassle-free returns & refunds</span>
+            </p>
+            <p>
+              <img src="imgs/secure_payments.svg">
+              <span class="cod-options">&nbsp; Trusted & secure payment gateway</span>
+            </p> 
+            <p>
+              <img src="imgs/info-1.svg">
+              <span class="cod-options">&nbsp; COD charges applicable ₹ 40</span>
+            </p>   
+            </div>
+            <!-- captcha -->
+            <div style="display: flex;">
+            <div id="image" class="inline" selectable="False"></div>
+            <div class="inline" onclick="generate()">
+              <i class="fas fa-sync"></i>
+            </div></div>
+            <div id="user-input" class="inline">
+              <input type="text" id="submit" class="captcha-input" placeholder="Captcha code" />
+            </div>
+              <input type="submit" id="captcha-btn" onclick="printmsg()" />
+              <p id="key"></p><br>
+            <!-- end of captcha -->  
+            <button type="button" class="debit-btn" data-toggle="modal" data-target="#thankyou">PAY NOW</button> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row security">
+    <div class="col">
+      <center><img src="imgs/secure_payments.svg" class="security"><br><span class="security-label">Quick & Secure Payments</span></center>
+    </div>
+    <div class="col">
+      <center><img src="imgs/easy_returns.svg" class="security"><br><span class="security-label">Easy Returns & Refunds</span></center>
+    </div>
+    <div class="col">
+      <center><img src="imgs/encrypted.svg" class="security"><br><span class="security-label">Encrypted User data</span></center>
+    </div><!-- 
+    <div class="col">
+      <center><img src="imgs/pci.svg" class="security"><br><span class="security-label">PCI Certified</span></center>
+    </div> -->
+  </div>
+</div>
+</div>
+<!-- end of accordions tabs for payment card  -->
+
+     </div>
+ <!-- end of open sidebar payment options card -->
+
+ 
+<!--  order placed -->
+<div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title text-center">Log In</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: -webkit-center;">
+          <div class="">
+            <img src="imgs/thank.gif" class="thankyou"><br>
+            <h2><b>Thank You!</b></h2><br>
+            <span class="span">Your order has been placed successfully.</span><br>
+            <span class="span">We will send you a notification within 2 days when it ships.</span><br><br>
+            <p><b>If you have any queries then feel free to get in contact us.</b></p><br>
+            <h6>ORDER ID #65800258635</h6>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  end of order placed -->
+
+<!-- view all coupons -->
+<div class="modal fade" id="coupons" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="height: 34rem;overflow: auto;">
+        <div class="modal-header">
+          <h5 class="modal-title text-center">Coupons and Offers</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card coupons-card">
+              <div class="card-headers">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                       <p><img src="imgs/club_membership.svg">
+                        Flat 50% Off*</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p class="detail">On your first order</p>
+                  </div>
+                </div>
+              </div><br>
+              
+              <div class="card-footers text-muted inner-card">
+                <div class="row">
+                  <div class="col-8">
+                    <h6>BHJKUGY50</h6>
+                  </div>
+                  <div class="col-4">
+                    <a href="">Collect</a>
+                  </div>
+                </div>
+              </div>
+            </div>          
+           </div>
+          </div>
+          <br>
+          <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card coupons-card">
+              <div class="card-headers">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                       <p><img src="imgs/club_membership.svg">
+                        Flat 50% Off*</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p class="detail">On your first order</p>
+                  </div>
+                </div>
+              </div><br>
+              
+              <div class="card-footers text-muted inner-card">
+                <div class="row">
+                  <div class="col-8">
+                    <h6>BHJKUGY50</h6>
+                  </div>
+                  <div class="col-4">
+                    <a href="">Collect</a>
+                  </div>
+                </div>
+              </div>
+            </div>          
+           </div>
+          </div>
+          <br>
+          <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card coupons-card">
+              <div class="card-headers">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                       <p><img src="imgs/club_membership.svg">
+                        Flat 50% Off*</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p class="detail">On your first order</p>
+                  </div>
+                </div>
+              </div><br>
+              
+              <div class="card-footers text-muted inner-card">
+                <div class="row">
+                  <div class="col-8">
+                    <h6>BHJKUGY50</h6>
+                  </div>
+                  <div class="col-4">
+                    <a href="">Collect</a>
+                  </div>
+                </div>
+              </div>
+            </div>          
+           </div>
+          </div>
+          <br><div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card coupons-card">
+              <div class="card-headers">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                       <p><img src="imgs/club_membership.svg">
+                        Flat 50% Off*</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p class="detail">On your first order</p>
+                  </div>
+                </div>
+              </div><br>
+              
+              <div class="card-footers text-muted inner-card">
+                <div class="row">
+                  <div class="col-8">
+                    <h6>BHJKUGY50</h6>
+                  </div>
+                  <div class="col-4">
+                    <a href="">Collect</a>
+                  </div>
+                </div>
+              </div>
+            </div>          
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end of view all coupons -->
+
+
+<!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+               <div class="modal-header" style="border-bottom: 1px solid #dee2e6;">
+                  <h5 class="modal-title" id="staticBackdropLabel">Cart</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                 <div class="table-responsive">
+          <table class="timetable_sub">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody class="show-cart table"></tbody>
+          </table>
+          <button class="clear-cart btn btn-danger">Clear Cart</button>
+        </div>
+        <hr class="hr">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="grand-total">Grand Total: ₹<span class="total-cart"></span>
+            </div>
+          </div>
+        </div><br>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <a href="product.html"><button type="submit" class="btn btn-style shop">CONTINUE SHOPPING</button></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <a href="checkout_payment.html"><button type="button" class="btn btn-style-secondary shop">PROCEED TO CHECKOUT</button></a>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+         </div>
+      </div>
+ 
+
+<div style="margin: 8px auto; display: block; text-align:center;">
+
+<!---728x90--->
+ 
+</div>
+  <!-- footer -->
+
+  <!-- footer -->
+  <div class="py-3 footer-copy">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>Policies: Returns Policy | Terms of use | Security | Privacy</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>© 2007-2024 Kidzera.com</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>Need help? Visit the <a href="#">Help Center</a> or <a href="#">Contact Us</a></p>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <!-- end of footer -->
+  
+  <!-- copyright -->
+  <!-- <div class="copy-right py-3">
+    <div class="container">
+      <p class="text-center ">© 2024 Kidzera. All rights reserved | Design by
+        <a href="#"> Kidzera.</a>
+      </p>
+    </div>
+  </div> -->
+  <!-- //copyright -->
+
+  <!-- js-files -->
+  <!-- common jquery plugin -->
+  <script data-cfasync="false" src="../../../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.3.1.min.js"></script>
+  <!-- //common jquery plugin -->
+
+  <!-- here stars scrolling icon -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+        };
+      */
+
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+  <!-- //here ends scrolling icon -->
+  <!-- js -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- //js -->
+  <!-- start-smoth-scrolling -->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+  <!-- start-smoth-scrolling -->
+
+  <!-- nav smooth scroll -->
+  <script>
+    $(document).ready(function () {
+      $(".dropdown").hover(
+        function () {
+          $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+          $(this).toggleClass('open');
+        },
+        function () {
+          $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+          $(this).toggleClass('open');
+        }
+      );
+    });
+  </script>
+  <!-- //nav smooth scroll -->
+
+  <!-- popup modal (for location)-->
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+      });
+
+    });
+  </script>
+  <!-- //popup modal (for location)-->
+
+  <!-- cart-js -->
+  <script src="js/minicart.js"></script>
+  <script>
+    paypals.minicarts
+      .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+
+    paypals.minicarts.cart.on('checkout', function (evt) {
+      var items = this.items(),
+        len = items.length,
+        total = 0,
+        i;
+
+      // Count the number of each item in the cart
+      for (i = 0; i < len; i++) {
+        total += items[i].get('quantity');
+      }
+
+      if (total < 3) {
+        alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+        evt.preventDefault();
+      }
+    });
+  </script>
+  <!-- //cart-js -->
+
+  <!-- password-script -->
+  <script>
+    window.onload = function () {
+      document.getElementById("password1").onchange = validatePassword;
+      document.getElementById("password2").onchange = validatePassword;
+    }
+
+    function validatePassword() {
+      var pass2 = document.getElementById("password2").value;
+      var pass1 = document.getElementById("password1").value;
+      if (pass1 != pass2)
+        document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+      else
+        document.getElementById("password2").setCustomValidity('');
+      //empty string means no validation error
+    }
+  </script>
+  <!-- //password-script -->
+
+  <!-- quantity -->
+  <script>
+    $('.value-plus').on('click', function () {
+      var divUpd = $(this).parent().find('.value'),
+        newVal = parseInt(divUpd.text(), 10) + 1;
+      divUpd.text(newVal);
+    });
+
+    $('.value-minus').on('click', function () {
+      var divUpd = $(this).parent().find('.value'),
+        newVal = parseInt(divUpd.text(), 10) - 1;
+      if (newVal >= 1) divUpd.text(newVal);
+    });
+  </script>
+  <!--quantity-->
+  <script>
+    $(document).ready(function (c) {
+      $('.close1').on('click', function (c) {
+        $('.rem1').fadeOut('slow', function (c) {
+          $('.rem1').remove();
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function (c) {
+      $('.close2').on('click', function (c) {
+        $('.rem2').fadeOut('slow', function (c) {
+          $('.rem2').remove();
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function (c) {
+      $('.close3').on('click', function (c) {
+        $('.rem3').fadeOut('slow', function (c) {
+          $('.rem3').remove();
+        });
+      });
+    });
+  </script>
+  <!-- //quantity -->
+
+  <!-- theme switch js (light and dark)-->
+  <script src="js/theme-change.js"></script>
+  <script>
+    function autoType(elementClass, typingSpeed) {
+      var thhis = $(elementClass);
+      thhis.css({
+        "position": "relative",
+        "display": "inline-block"
+      });
+      thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+      thhis = thhis.find(".text-js");
+      var text = thhis.text().trim().split('');
+      var amntOfChars = text.length;
+      var newString = "";
+      thhis.text("|");
+      setTimeout(function () {
+        thhis.css("opacity", 1);
+        thhis.prev().removeAttr("style");
+        thhis.text("");
+        for (var i = 0; i < amntOfChars; i++) {
+          (function (i, char) {
+            setTimeout(function () {
+              newString += char;
+              thhis.text(newString);
+            }, i * typingSpeed);
+          })(i + 1, text[i]);
+        }
+      }, 1500);
+    }
+
+    $(document).ready(function () {
+      // Now to start autoTyping just call the autoType function with the 
+      // class of outer div
+      // The second paramter is the speed between each letter is typed.   
+      autoType(".type-js", 200);
+    });
+  </script>
+  <!-- //theme switch js (light and dark)-->
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- //disable body scroll which navbar is in active -->
+
+  <!--bootstrap-->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- //bootstrap-->
+  <!-- //Js scripts -->
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8f1454b2ab44958a',t:'MTczNDA3NTg4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../../../../../../cdn-cgi/challenge-platform/h/g/scripts/jsd/f9063374b04d/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+
+ <!-- js for open sidebar payment options card -->
+ <script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "auto";
+  document.getElementById("main").style.marginLeft = "auto";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+ <!-- end of js for open sidebar payment options card -->
+
+<!-- captcha -->
+<script>
+        let captcha;
+function generate() {
+
+    // Clear old input
+    document.getElementById("submit").value = "";
+
+    // Access the element to store
+    // the generated captcha
+    captcha = document.getElementById("image");
+    let uniquechar = "";
+
+    const randomchar =
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    // Generate captcha for length of
+    // 5 with random character
+    for (let i = 1; i < 5; i++) {
+        uniquechar += randomchar.charAt(
+            Math.random() * randomchar.length)
+    }
+
+    // Store generated input
+    captcha.innerHTML = uniquechar;
+}
+
+function printmsg() {
+    const usr_input = document
+        .getElementById("submit").value;
+
+    // Check whether the input is equal
+    // to generated captcha or not
+    if (usr_input == captcha.innerHTML) {
+        let s = document.getElementById("key")
+            .innerHTML = "Matched";
+        /*generate();*/
+    }
+    else {
+        let s = document.getElementById("key")
+            .innerHTML = "";
+             alert('Invalid Captcha');  
+             generate();
+    }
+}
+    </script>
+<!-- end of captcha -->
+
+
+<script>
+                  // selecting loading div
+const loader = document.querySelector("#loading");
+                  // showing loading
+function displayLoading() {
+    loader.classList.add("display");
+    // to stop loading after some time
+    setTimeout(() => {
+        loader.classList.remove("display");
+    }, 15000);
+}
+                </script>
+<script src="js/cart.js"></script>
+<script src="js/current_loc.js"></script>
+<script src="js/signup.js"></script>
+<script src="js/search.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
